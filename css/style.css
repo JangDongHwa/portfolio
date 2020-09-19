@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* header */
-#header{height:100%;position:fixed;}
+#header{height:100%;position:fixed; z-index:100;}
 .header_inner{width: 350px; height: 100%; background:#3845c6; padding-top:240px;}
 .img{padding:15px 30px;}
 .img img{max-width:100%; border-radius:150px; border:10px solid #868cca; box-sizing:border-box;}
@@ -10,5 +10,7 @@
 .menu ul li a{font-size:24px; font-weight: 600; color:#868cca;}
 /* // header */
 /* container */
-#home{width: 100%; height: 1300px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover;}
+#home{width: 100%; height: 1000px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover; position:relative; border-bottom:1px solid #eee;}
+#home h3{position:absolute; right:15%; top:40%; text-align:center;}
+#home h3 a{color:#fff; font-size:50px; font-weight:bold;}
 /* // container */
