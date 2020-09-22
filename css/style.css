@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html,body{font-family:'Noto Sans KR', sans-serif;}
+html,body{font-family:'Noto Sans KR', sans-serif; min-width:1100px;}
 /* header */
 #header{height:100%;position:fixed; z-index:100;}
 .header_inner{width: 350px; height: 100%; background:#3845c6; padding-top:240px;}
@@ -13,17 +13,37 @@ html,body{font-family:'Noto Sans KR', sans-serif;}
 /* // header */
 /* container */
 /* home */
-#home{width: 100%; height: 1000px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover; position:relative; border-bottom:2px solid #eee;}
+#home{width: 100%; height: 940px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover; position:relative; border-bottom:2px solid #eee;}
 #home .title{position:absolute; right:15%; top:40%;}
 #home h3{text-align:center;}
 #home h3 a{color:#fff; font-size:50px; font-weight:bold;}
 #home .icon{position:absolute; right:5%; top:5%;}
 .icon .information{display:block; width: 55px;height: 55px; text-indent:-9999px; background:url(../images/spr_sns.png) no-repeat center; background-position:-210px 0;border:1px solid #ccc; border-radius:15px; cursor:pointer;}
-#home .page_info{width:50%; height: 80%; background:#3845c6; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);opacity:0;}
+#home .page_info{width:50%; height: 80%; background:#3845c6; position:relative; left:50%; top:50%; transform:translate(-50%,-50%);opacity:0; overflow:hidden;}
+#home .page_info.on{opacity:1; transition:0.3s;}
 .page_info h3{font-size:36px; font-weight:500; color:#fff;}
-#home .page_info.on{opacity:1;}
+.page_info .info_body{padding:35px 40px;}
+.page_info .info_body p{padding-bottom:15px; color:#fff; text-align:center;}
+.page_info .info_toggle{position:absolute;right: 0;top: 0;width: 50px;height: 50px; cursor:pointer;}
+.info_toggle .line{position:absolute; width: 40px; height: 2px; background:#fff; top:50%;left:50%;}
+.line.left{transform:translate(-50%,-50%) rotate(45deg);}
+.line.right{transform:translate(-50%,-50%) rotate(-45deg);}
 /* // home */
 /* 공통 */
-.content_inner{padding-left:350px; height: 1000px; border-bottom:2px solid #eee;}
+.content_inner{padding:30px 0; padding-left:350px; height: 940px; border-bottom:2px solid #eee; box-sizing:border-box;}
+.bg{background:#e8e9f6;}
+.content_inner .title{padding:50px 48px;}
+.content_inner .title h3{font-size:50px; font-weight:600;}
+.body{}
+.body_txt{height:435px;}
+.body_txt h4{font-size:24px;font-weight:600; padding-bottom:10px;}
+.body_txt p{font-size:18px; font-weight:400;padding:0 50px; padding-bottom:7px;}
 /* // 공통 */
+/* about */
+.body ul{overflow:hidden; padding:0 48px;}
+.body ul li{float:left; border:4px solid #777; box-sizing:border-box; width: calc(50% - 15px); text-align:center;}
+.body ul li.vision{margin-left:30px;}
+.body .icon{padding:15px 0;}
+.icon img{max-width:100%;}
+/* // about */
 /* // container */
