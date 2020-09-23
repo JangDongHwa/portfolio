@@ -2,7 +2,7 @@
 html,body{font-family:'Noto Sans KR', sans-serif; min-width:1100px;}
 /* header */
 #header{height:100%;position:fixed; z-index:100;}
-.header_inner{width: 350px; height: 100%; background:#3845c6; padding-top:240px;}
+.header_inner{width: 350px; height: 100%; background:#3845c6; padding-top:50%;}
 .img{padding:15px 30px;}
 .img img{max-width:100%; border-radius:150px; border:10px solid #868cca; box-sizing:border-box;}
 .menu{text-align:center;}
@@ -11,39 +11,109 @@ html,body{font-family:'Noto Sans KR', sans-serif; min-width:1100px;}
 .menu ul li:hover a:after{content:''; display:block; width: 28%; height:3px; background:#868cca; margin:0 auto;}
 .menu ul li a{font-size:24px; font-weight: 600; color:#868cca;}
 /* // header */
+
 /* container */
 /* home */
-#home{width: 100%; height: 940px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover; position:relative; border-bottom:2px solid #eee;}
+#home{width: 100%; height: 940px; background:url(../images/home_bg_img.jpg) no-repeat center; background-size:cover; position:relative; border-bottom:2px solid #eee; overflow:hidden;}
 #home .title{position:absolute; right:15%; top:40%;}
 #home h3{text-align:center;}
 #home h3 a{color:#fff; font-size:50px; font-weight:bold;}
 #home .icon{position:absolute; right:5%; top:5%;}
 .icon .information{display:block; width: 55px;height: 55px; text-indent:-9999px; background:url(../images/spr_sns.png) no-repeat center; background-position:-210px 0;border:1px solid #ccc; border-radius:15px; cursor:pointer;}
-#home .page_info{width:50%; height: 80%; background:#3845c6; position:relative; left:50%; top:50%; transform:translate(-50%,-50%);opacity:0; overflow:hidden;}
+#home .page_info{width:50%; height: 60%; background:#3845c6; position:relative; left:60%; top:50%; transform:translate(-50%,-50%);opacity:0; overflow:hidden;}
 #home .page_info.on{opacity:1; transition:0.3s;}
-.page_info h3{font-size:36px; font-weight:500; color:#fff;}
+.page_info h3{font-size:36px; font-weight:500; color:#fff; padding-top:35px;}
 .page_info .info_body{padding:35px 40px;}
-.page_info .info_body p{padding-bottom:15px; color:#fff; text-align:center;}
+.page_info .info_body p{padding-bottom:25px; color:#fff; text-align:center; font-size:24px;}
 .page_info .info_toggle{position:absolute;right: 0;top: 0;width: 50px;height: 50px; cursor:pointer;}
 .info_toggle .line{position:absolute; width: 40px; height: 2px; background:#fff; top:50%;left:50%;}
 .line.left{transform:translate(-50%,-50%) rotate(45deg);}
 .line.right{transform:translate(-50%,-50%) rotate(-45deg);}
+.w_point{width: 100%; height: 50%;position:absolute; bottom:0;}
+.wave{width: 100%; background:url(../images/home_wave_paint.png) repeat-x; position:absolute;}
+.wave.top{height: 50%; bottom:40px; animation:wave_top 2s alternate infinite linear;}
+.wave.middle{height: 40%; bottom:20px; animation:wave_middle 1.5s alternate infinite linear;}
+.wave.bottom{height: 30%; bottom:0; animation:wave_bottom 1s alternate infinite linear;}
+@keyframes wave_top{
+	from{transform:translate(40px, 40px);}
+	to{transform:translate(20px, 20px);}
+}
+@keyframes wave_middle{
+	from{transform:translate(-20px, 125px);}
+	to{transform:translate(125px, -20px);}
+}
+@keyframes wave_bottom{
+	from{transform:translate(0, 0);}
+	to{transform:translate(0, 20px);}
+}
 /* // home */
 /* 공통 */
-.content_inner{padding:30px 0; padding-left:350px; height: 940px; border-bottom:2px solid #eee; box-sizing:border-box;}
+.content_inner{padding:30px 0; padding-left:350px; height: 940px; border-bottom:2px solid #ccc; box-sizing:border-box;}
 .bg{background:#e8e9f6;}
 .content_inner .title{padding:50px 48px;}
 .content_inner .title h3{font-size:50px; font-weight:600;}
-.body{}
+.body{padding:0 48px;}
 .body_txt{height:435px;}
 .body_txt h4{font-size:24px;font-weight:600; padding-bottom:10px;}
 .body_txt p{font-size:18px; font-weight:400;padding:0 50px; padding-bottom:7px;}
 /* // 공통 */
 /* about */
-.body ul{overflow:hidden; padding:0 48px;}
-.body ul li{float:left; border:4px solid #777; box-sizing:border-box; width: calc(50% - 15px); text-align:center;}
-.body ul li.vision{margin-left:30px;}
-.body .icon{padding:15px 0;}
+.body.about ul{overflow:hidden;}
+.body.about ul li{float:left; border:4px solid #777; box-sizing:border-box; width: calc(50% - 15px); text-align:center;}
+.body.about ul li.vision{margin-left:30px;}
+.body.about .icon{padding:15px 0;}
 .icon img{max-width:100%;}
 /* // about */
+/* skill */
+.txt p{position:relative; padding:30px 20px 0; font-size:18px;}
+.txt p .point{display:block; position:absolute; left:0; top:38px;width: 10px;height: 10px; border-radius:5px; background:#333;}
+.skill_detail{padding-top:100px;}
+.skill_detail li{padding-bottom:30px; font-size:24px;}
+.skill_detail li .bar{background:#333; width: 80%;height:15px; border-radius:12px; position:relative;}
+.bar .full{display:block; position:absolute; width:0; height: 100%; border-radius:15px; background:#3845c6;}
+.bar .full.html, .bar .full.css{animation:bar_full_high 6s forwards;}
+.bar .full.script{animation:bar_full_middle 6s forwards;}
+.bar .full.photo{animation:bar_full_row 6s forwards;}
+@keyframes bar_full_high{
+	0%{width: 100%;}
+	25%{width: 20%;}
+	50%{width: 70%;}
+	75%{width: 60%;}
+	100%{width: 90%;}
+}
+@keyframes bar_full_middle{
+	0%{width: 70%;}
+	25%{width: 40%;}
+	50%{width: 80%;}
+	75%{width: 30%;}
+	100%{width: 85%;}
+}
+@keyframes bar_full_row{
+	0%{width: 90%;}
+	25%{width: 30%;}
+	50%{width: 50%;}
+	75%{width: 10%;}
+	100%{width: 80%;}
+}
+/* // skill */
+/* portfolio */
+.slider{padding:50px 0;}
+.slider li .slider_txt{position:absolute; right:10%; top:10%;}
+/* // portfolio */
+/* contact */
+.body.contact{text-align:center;padding:200px 0;}
+.body_txt p.empty{padding-bottom:50px;}
+.body_txt ul{overflow:hidden; padding:0 649px;}
+.body_txt ul li{float:left;}
+.body_txt ul li a{display:block; width: 55px; height: 55px; margin:0 15px;text-indent:-9999px; background:url(../images/spr_sns.png) no-repeat center; cursor:pointer;}
+.body_txt ul li.insta a{background-position:-140px 0;}
+.body_txt ul li.blog a{background-position:-70px 0;}
+.body_txt ul li.github a{background-position:0 0;}
+/* // contact */
 /* // container */
+
+/* footer */
+#footer{height:95px; background:#eee; padding-left:350px;}
+.copywrite{padding:20px 48px;}
+.copywrite p{color:#868cca; font-size:12px;}
+/* // footer */
