@@ -6,20 +6,15 @@
 	<title>신입 웹퍼블리셔 장동화</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(function(){
 			$(".information").click(function(){
-				$(".page_info").addClass("on");
+				$(".page_info").fadeIn();
 			});
-			$(".info_toggle").click(function(){
-				$(".page_info").removeClass("on");
-			});
-			$(".slider").bxSlider({
-
+			$(".btn_toggle").click(function(){
+				$(".page_info").hide();
 			});
 		});
 	</script>
@@ -44,27 +39,23 @@
 	  	</div>
 	  </header>
 	  <!-- // Header -->
-
 	  <!-- Container -->
 	  <div id="container">
-	  	<div id="home">
+	  	<div id="home" class="section">
 	  		<div class="title">
-	  		<h3><a href="#home">Welcome Jangdonghwa's<br>Portfolio site</a></h3>
+	  		<h1><a href="#home">Welcome Jangdonghwa's<br>Portfolio site</a></h1>
 	  		</div>
 	  		<div class="icon">
 	  			<button type="button" class="information">자세히 알아보기</button>
 	  		</div>
 	  		<div class="page_info">
-	  			<h3>Portfolio Site 소개</h3>
+	  			<h2>Portfolio Site 소개</h2>
 	  			<div class="info_body">
-	  				<p>1.<br> 본 사이트는 포트폴리오용으로<br> 제작되었음을 알려드립니다.</p>
-	  				<p>2.<br> 본 사이트는 HTML5, CSS3, JAVASCRIPT(J-Query)를<br> 사용해 만들었습니다.</p>
-	  				<p>3.<br> 메인페이지로만 구성된 사이트로<br> HOME / ABOUT / SKILL / PORTFOLIO / CONTACT로 구성되어 있습니다.</p>
+	  				<p>1. 본 사이트는 포트폴리오용으로 제작되었음을 알려드립니다.</p>
+	  				<p>2.본 사이트는 HTML5, CSS3, JAVASCRIPT(J-Query)를 사용해 만들었습니다.</p>
+	  				<p>3. 메인페이지로만 구성된 사이트로 HOME / ABOUT / SKILL / PORTFOLIO / CONTACT로 구성되어 있습니다.</p>
 	  			</div>
-	  			<div class="info_toggle">
-	  				<div class="line left"></div>
-	  				<div class="line right"></div>
-	  			</div>
+	  			<button type="button" class="btn_toggle"></button>
 	  		</div>
 	  		<div class="w_point">
 	  				<div class="wave top"></div>
@@ -76,144 +67,118 @@
 	  				<div class="wave bottom"></div>
   			</div>
 	  	</div>
-	  	<div id="about">
-	  		<div class="content_inner">
-	  			<div class="title">
-	  				<h3>About</h3>
-	  			</div>
-	  			<div class="body about">
-	  				<ul>
-	  					<li class="introduce">
-	  						<div class="icon">
-	  							<img src="images/icon_about_01.jpg" alt="아이콘">
-	  						</div>
-	  						<div class="body_txt">
-		  						<h4>이름</h4>
-		  						<p>장동화 (Jang Dong Hwa)</p>
-		  						<h4>기본정보</h4>
-		  						<p>1992.05.19</p>
-		  						<p>010 5173 8849</p>
-		  						<p>jiangdd05@naver.com</p>
-		  						<h4>경험</h4>
-		  						<p>하이미디어컴퓨터학원</p>
-		  						<p>UI/UX 웹디자인 & 웹 퍼블리셔 실무</p>
-		  						<p>2020.04.20 ~ 2020.09.18</p>
-	  						</div>
-	  					</li>
-	  					<li class="vision">
-	  						<div class="icon">
-		  						<img src="images/icon_about_02.png" alt="아이콘">
-	  						</div>
-	  						<div class="body_txt">
-		  						<h4>비전</h4>
-		  						<p>
-		  						 "안녕하십니까 신입 웹 퍼블리셔 장동화입니다.
-		  						 짧다면 짧은 교육을 마치고 사회에 첫 발을 내딛게 될 수 있게 되어 영광이라 생각합니다."
-		  						</p>
-		  						<p>
-		  							"기회가 주어진다면 최선을 다해 제가 가진 능력을 다 활용해<br> 회사의 발전에 이바지하겠습니다."
-		  						</p>
-		  					</div>
-	  					</li>
-	  				</ul>
-	  			</div>
-	  		</div>
+	  	<div id="about" class="section">
+  			<div class="title">
+  				<h2>About</h2>
+  			</div>
+  			<div class="body about">
+  				<ul>
+  					<li class="introduce">
+  						<div class="icon">
+  							<img src="images/icon_about_01.jpg" alt="">
+  						</div>
+  						<div class="body_txt">
+	  						<h4>이름</h4>
+	  						<p>장동화 (Jang Dong Hwa)</p>
+	  						<h4>기본정보</h4>
+	  						<p>1992.05.19</p>
+	  						<p>010 5173 8849</p>
+	  						<p>jiangdd05@naver.com</p>
+	  						<h4>경험</h4>
+	  						<p>하이미디어컴퓨터학원</p>
+	  						<p>UI/UX 웹디자인 & 웹 퍼블리셔 실무</p>
+	  						<p>2020.04.20 ~ 2020.09.18</p>
+  						</div>
+  					</li>
+  					<li class="vision">
+  						<div class="icon">
+	  						<img src="images/icon_about_02.png" alt="">
+  						</div>
+  						<div class="body_txt">
+	  						<h4>비전</h4>
+	  						<p>
+	  						 "안녕하십니까 신입 웹 퍼블리셔 장동화입니다.
+	  						 짧다면 짧은 교육을 마치고 사회에 첫 발을 내딛게 될 수 있게 되어 영광이라 생각합니다."
+	  						</p>
+	  						<p>
+	  							"기회가 주어진다면 최선을 다해 제가 가진 능력을 다 활용해<br> 회사의 발전에 이바지하겠습니다."
+	  						</p>
+	  					</div>
+  					</li>
+  				</ul>
+  			</div>
 	  	</div>
-	  	<div id="skill">
-	  		<div class="content_inner bg">
-	  			<div class="title">
-	  				<h3>Skill</h3>
-	  			</div>
-	  			<div class="body">
-	  				<div class="txt">
-	  					<p><span class="point"></span>웹표준성에 고려한 하드코딩 가능</p>
-	  					<p><span class="point"></span>CSS3를 이용해 스타일 제작 변경 가능</p>
-	  					<p><span class="point"></span>미디어쿼리를 이용한 반응형 웹사이트 제작 가능</p>
-	  					<p><span class="point"></span>스크립트 활용 및 플러그인 사용 가능</p>
-	  					<p><span class="point"></span>포토샵을 활용한 간단한 이미지편집 가능</p>
-	  				</div>
-	  				<div class="skill_detail">
-	  					<ul>
-	  						<li>
-	  							HTML5 - 90%
-	  							<p class="bar">
-	  								<span class="full html"></span>
-	  							</p>
-	  						</li>
-	  						<li>
-	  							CSS3 - 90%
-	  							<p class="bar">
-	  								<span class="full css"></span>
-	  							</p>
-	  						</li>
-	  						<li>
-	  							JavaScript - 85%
-	  							<p class="bar">
-	  								<span class="full script"></span>
-	  							</p>
-	  						</li>
-	  						<li>
-	  							PhotoShop - 80%
-	  							<p class="bar">
-	  								<span class="full photo"></span>
-	  							</p>
-	  						</li>
-	  					</ul>
-	  				</div>
-	  			</div>
-	  		</div>
+	  	<div id="skill" class="section">
+  			<div class="title">
+  				<h2>Skill</h2>
+  			</div>
+  			<div class="body">
+  				<div class="txt">
+  					<p><span class="point"></span>웹표준성에 고려한 하드코딩 가능</p>
+  					<p><span class="point"></span>CSS3를 이용해 스타일 제작 변경 가능</p>
+  					<p><span class="point"></span>미디어쿼리를 이용한 반응형 웹사이트 제작 가능</p>
+  					<p><span class="point"></span>스크립트 활용 및 플러그인 사용 가능</p>
+  					<p><span class="point"></span>포토샵을 활용한 간단한 이미지편집 가능</p>
+  				</div>
+  				<div class="skill_detail">
+  					<ul>
+  						<li>
+  							HTML5 - 90%
+  							<p class="bar">
+  								<span class="full html"></span>
+  							</p>
+  						</li>
+  						<li>
+  							CSS3 - 90%
+  							<p class="bar">
+  								<span class="full css"></span>
+  							</p>
+  						</li>
+  						<li>
+  							JavaScript - 85%
+  							<p class="bar">
+  								<span class="full script"></span>
+  							</p>
+  						</li>
+  						<li>
+  							PhotoShop - 80%
+  							<p class="bar">
+  								<span class="full photo"></span>
+  							</p>
+  						</li>
+  					</ul>
+  				</div>
+  			</div>
 	  	</div>
-	  	<div id="portfolio">
-	  		<div class="content_inner">
-	  			<div class="title">
-	  				<h3>Portfolio</h3>
-	  			</div>
-	  			<div class="body">
-	  				<ul class="slider">
-	  					<li>
-	  						<img src="images/portfolio_img_01.png" alt="반응형이미지">
-	  						<div class="slider_txt">
-	  							<h3>홈페이지 이름</h3>
-	  							<p>홈페이지 설명</p>
-	  							<button type="button"><a href="#">보러가기</a></button>
-	  						</div>
-	  					</li>
-	  					<li>
-	  						<img src="images/portfolio_img_02.png" alt="리뉴얼이미지">
-	  						<div class="slider_txt">
-	  							<h3>홈페이지 이름</h3>
-	  							<p>홈페이지 설명</p>
-	  							<button type="button"><a href="#">보러가기</a></button>
-	  						</div>
-	  					</li>
-	  				</ul>
-	  			</div>
-	  		</div>
+	  	<div id="portfolio" class="section">
+  			<div class="title">
+  				<h2>Portfolio</h2>
+  			</div>
+  			<div class="body">
+  				
+  			</div>
 	  	</div>
-	  	<div id="contact">
-	  		<div class="content_inner bg">
-	  			<div class="title">
-	  				<h3>Contact</h3>
-	  			</div>
-	  			<div class="body contact">
-	  				<div class="body_txt">
-	  					<h4>PHONE</h4>
-	  					<p class="empty"> 010. 5173. 8849</p>
-	  					<h4>E-MAIL</h4>
-	  					<p class="empty">jiangdd05@naver.com</p>
-	  					<h4>Others</h4>
-	  					<ul>
-			  				<li class="insta"><a href="https://www.instagram.com/jiangddong/">instagram</a></li>
-			  				<li class="blog"><a href="https://blog.naver.com/jiangdd05">blog</a></li>
-			  				<li class="github"><a href="https://github.com/jangdonghwa">github</a></li>
-			  			</ul>
-	  				</div>
-	  			</div>
-	  		</div>
+	  	<div id="contact" class="section">
+  			<div class="title">
+  				<h2>Contact</h2>
+  			</div>
+  			<div class="body contact">
+  				<div class="body_txt">
+  					<h4>PHONE</h4>
+  					<p class="empty"> 010. 5173. 8849</p>
+  					<h4>E-MAIL</h4>
+  					<p class="empty">jiangdd05@naver.com</p>
+  					<h4>Others</h4>
+  					<ul>
+		  				<li class="insta"><a href="https://www.instagram.com/jiangddong/">instagram</a></li>
+		  				<li class="blog"><a href="https://blog.naver.com/jiangdd05">blog</a></li>
+		  				<li class="github"><a href="https://github.com/jangdonghwa">github</a></li>
+		  			</ul>
+  				</div>
+  			</div>
 	  	</div>
 	  </div>
 	  <!-- // Container -->
-
 	  <!-- Footer -->
 	  <footer id="footer">
 	  	<div class="copywrite">
