@@ -16,6 +16,20 @@
 			$(".btn_toggle").click(function(){
 				$(".page_info").hide();
 			});
+			$(".mt_toggle").click(function(){
+				var toggle = $(".mt_toggle").attr("class")
+				if(toggle=="mt_toggle"){
+					$(".mt_toggle").addClass("active");
+					$(".mt_img").fadeIn();
+					$(".mt_menu").fadeIn();
+					$("#header").addClass("active");
+				}else{
+					$(".mt_toggle.active").removeClass("active");
+					$(".mt_img").hide();
+					$(".mt_menu").hide();
+					$("#header").removeClass("active");
+				}
+			});
 		});
 	</script>
 </head>
@@ -37,8 +51,12 @@
 	  			</ul>
 	  		</div>
 	  	</div>
-	  	<div class="mt_toggle"></div>
-	  	<div class="mt_hader_inner">
+	  	<div class="mt_header_inner">
+	  		<button type="button" class="mt_toggle">
+		  		<span class="line top"></span>
+		  		<span class="line middle"></span>
+		  		<span class="line bottom"></span>
+		  	</button >
 	  		<div class="mt_img">
 	  			<img src="images/menu_img.jpg" alt="장동화">
 	  		</div>
@@ -97,7 +115,6 @@
 	  						<p>장동화 (Jang Dong Hwa)</p>
 	  						<h3>기본정보</h3>
 	  						<p>1992.05.19</p>
-	  						<p>010 5173 8849</p>
 	  						<p>jiangdd05@naver.com</p>
 	  						<h3>경험</h3>
 	  						<p>하이미디어컴퓨터학원</p>
