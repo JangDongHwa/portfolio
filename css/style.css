@@ -85,13 +85,14 @@ html,body{font-family:'Noto Sans KR', sans-serif;}
 }
 /* // skill */
 /* portfolio */
+.contents ul{width:900px; margin:0 auto;}
 .p_list{overflow:hidden; margin-bottom:30px;}
 .p_list a{display:block; text-align:center;}
-.p_list .img_box{width:300px; height:auto; overflow:hidden;}
-.p_list .img_box img{width:100%;}
+.p_list .img_box{width:300px; height:300px; overflow:hidden;}
+.p_list .img_box img{width:100%; height:100%;}
 .p_list .contents_txt,.p_list .img_box{float:left;}
 .p_list.type_b .img_box{float:right;}
-.p_list .contents_txt .txt_info{width:440px; line-height:30px; text-overflow:ellipsis; overflow:hidden;}
+.p_list .contents_txt .txt_info{width:440px; padding:50px 20px; line-height:30px; text-overflow:ellipsis; overflow:hidden;}
 /* // portfolio */
 /* contact */
 .contents.contact{text-align:center;}
